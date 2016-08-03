@@ -1,0 +1,20 @@
+<h1><%= @videos.count %> Styles Musicaux Disponible !</h1>
+
+<p>Enjoy ! </p>
+
+	<div class="row">
+	   <% for video in @videos %>
+		  <div class="col-sm-4 col-md-3">
+		    <div class="thumbnail">
+		      <%= image_tag video.image.url(:medium), alt: video.title, class: "img-circle" %>
+		      <div class="caption">
+		        <h3><%= video.title %></h3>
+		        <p><%= truncate(video.descrition) %></p>
+		        <a href="<%= video_path(video.slug) %>" class="btn btn-primary", role="button">Click</a>
+		      </div>
+		    </div>
+		  </div>
+	  <% end %>
+	  	  	<audio src="www.youtube.com/embed/TFQV8C04dgU" controls></audio>
+	</div>
+

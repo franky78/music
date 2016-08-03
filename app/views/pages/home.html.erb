@@ -1,0 +1,44 @@
+<% provide(:title, "Home") %>
+
+<div class="jumbotron">
+<h1 style="text-align: center">Welcome to <br>Holdup2X music producer!</h1>
+</div>
+
+	<div class="row">
+
+		  <div class="col-sm-4 col-md-3">
+		    <div class="thumbnail">
+		        <h2>Soza - H.T.U.L</h2>
+             <iframe class= "img-circle" width="200" height="200" src="https://www.youtube.com/embed/IuA8kwSSkdg" 
+             frameborder="0" allowfullscreen></iframe>
+		      <div class="caption">
+		        <h3>Poduced by HOLDUP2X </h3>
+		      </div>
+		    </div>
+		  </div>
+
+	
+<table id="table_prod" class = "table table-bordered table-striped" 
+style="width: 400px;">
+	<thead>.
+		<tr>
+		<th>NAME</th>
+		<th>PROD</th>
+		</tr>
+		</thead>
+		
+		
+		<tbody>
+		<% @resumes.each do |resume| %>
+		
+		
+		<tr>
+		<td><%= resume.name %></td>
+		<td><audio src ="<%= resume.attachment_url %>" controls></audio></td>
+		</tr>
+		
+		<% end %>
+	</tbody>
+</table>
+
+	</div>
