@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Change Use sqlite3 to pg as the database for Active Record 
+gem 'pg', '~> 0.18.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -34,6 +34,9 @@ gem 'mime-types', '~> 3.1'
 
 #carrierwave
 gem 'carrierwave', '~> 0.11.2'
+
+#Heroku
+#gem 'heroku', '~> 3.43', '>= 3.43.9'
 
 #audiojs
 #gem 'audiojs-rails'
